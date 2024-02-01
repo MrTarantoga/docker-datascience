@@ -1,4 +1,4 @@
-ARG ROOT_CONTAINER=nvidia/cuda:11.7.1-cudnn8-runtime-ubuntu22.04
+ARG ROOT_CONTAINER=nvidia/cuda:12.1.0-cudnn8-runtime-ubuntu22.04
 
 FROM $ROOT_CONTAINER
 
@@ -116,7 +116,7 @@ ENV MA_PYPI_PACKAGES="\
     xgboost \
     numpy \
     properscoring \
-    "ray[data,train,tune]==2.9.1" \
+    ray[data,train,tune]==2.9.1 \
     zstandard \
     blosc2 \
     pandas \
@@ -127,6 +127,9 @@ ENV MA_PYPI_PACKAGES="\
     seaborn \
     statsmodels \
     matplotlib \
+    plotly==5.18.0 \
+    plotly-geo==1.0.0 \
+    kaleido \
     Pillow \
     pydot \
     h5py \
